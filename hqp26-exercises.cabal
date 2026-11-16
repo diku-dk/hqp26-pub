@@ -1,0 +1,38 @@
+cabal-version: 3.4
+name: hqp26-exercises
+version: 0.1.0.0
+synopsis: Programming exercises for Hybrid Quantum-Classical Programming
+build-type: Simple
+
+library
+    hs-source-dirs:
+        examples
+        exercises/chapter01
+        exercises/chapter02
+        exercises/chapter03
+        exercises/chapter04
+        exercises/chapter05
+        exercises/chapter06
+    exposed-modules:
+        ClassicalStarter
+        QubitsStarter
+        QubitsStarter2
+        TensorProductsStarter
+        PauliBlochStarter
+        MeasurementStarter
+    build-depends:
+        base,
+        containers,
+        hmatrix,
+        QuickCheck,
+        random,
+        qpp
+    default-language: GHC2021
+    default-extensions:
+        NoMonomorphismRestriction
+        TypeFamilies
+        PatternSynonyms
+        ViewPatterns
+        LambdaCase
+    -- Student modules are loaded on demand, without editing the module list.
+    ghc-options: -Wno-missing-home-modules
